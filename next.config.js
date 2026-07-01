@@ -12,9 +12,7 @@ const nextConfig = {
       },
     ],
   },
-  experimental: {
-    serverComponentsExternalPackages: ["mongoose"],
-  },
+  serverExternalPackages: ["mongoose"],
   // Disable telemetry to fix network errors
   eslint: {
     ignoreDuringBuilds: true,

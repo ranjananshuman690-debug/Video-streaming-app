@@ -19,7 +19,10 @@ export const metadata = {
 };
 
 export default async function RootLayout({ children }) {
-  const session = await getServerSession(authOptions);
+  let session = null;
+  try {
+    session = await getServerSession(authOptions);
+  } catch (_) {}
 
   return (
     <html lang="en" className="dark">
